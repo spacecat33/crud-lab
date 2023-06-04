@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
-import ReviewsContainer from '../../containers/ReviewsContainer';
+import ReviewsContainer from '../../containers/ReviewsContainer'
 
 class Restaurant extends Component {
 
+  handleDeleteClick = () => {
+    this.props.deleteRestaurant(this.props.restaurant.id)
+  }
 
   render() {
     const { restaurant } = this.props;
-
+    console.log("form 7 - rendering" + restaurant)
     return (
       <div>
         <li>
           {restaurant.text}
-          <button> X </button>
+          <button onClick={() => this.handleDeleteClick()}> X </button>
           <ReviewsContainer restaurant={restaurant}/>
         </li>
       </div>
