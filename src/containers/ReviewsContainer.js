@@ -26,7 +26,7 @@ const mapDispatchToProps = dispatch => {
   console.log("form 8 - in reviews mapDispatchToProps")
   return {
     addReview: review => dispatch({type: "ADD_REVIEW", review}, console.log("form 10 - in addReview dispatch")),
-    deleteReview: reviewId => dispatch({type: "DELETE_REVIEW", reviewId}, console.log("in deleteReview dispatch"))
+    deleteReview: reviewId => dispatch({type: "DELETE_REVIEW", reviewId}, console.log("in deleteReview dispatch")),
   }
 }
 

@@ -23,7 +23,9 @@ const mapDispatchToProps = dispatch => {
   console.log("2. in restaurants mapDispatchToProps")
   return {
     addRestaurant: restaurantData => dispatch({type: "ADD_RESTAURANT", text: restaurantData}, console.log("form 3. in addRestaurant dispatch")),
-    deleteRestaurant: restaurantId => dispatch({type: "DELETE_RESTAURANT", id: restaurantId}, console.log("in deleteRestaurant dispatch"))
+    deleteRestaurant: restaurantId => dispatch({type: "DELETE_RESTAURANT", id: restaurantId}, console.log("in deleteRestaurant dispatch")),
+    updateRestaurant: restaurantId => dispatch({type: "UPDATE_RESTAURANT", id: restaurantId}, console.log("in updateRestaurant dispatch")),
+
   }
 }
 

@@ -7,6 +7,11 @@ class Restaurant extends Component {
     this.props.deleteRestaurant(this.props.restaurant.id)
   }
 
+  // handleUpdateClick = () => {
+  //   this.props.updateRestaurant(this.props.restaurant.id)
+  // }
+
+
   render() {
     const { restaurant } = this.props;
     console.log("form 7 - rendering" + restaurant)
@@ -14,7 +19,8 @@ class Restaurant extends Component {
       <div>
         <li>
           {restaurant.text}
-          <button onClick={() => this.handleDeleteClick()}> X </button>
+          <button onClick={() => this.handleDeleteClick()}> Delete </button>
+          {/* <button onClick={() => this.handleUpdateClick()}> Edit/update </button> */}
           <ReviewsContainer restaurant={restaurant}/>
         </li>
       </div>

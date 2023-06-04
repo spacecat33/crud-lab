@@ -23,6 +23,16 @@ export default function manageRestaurants(state = {
     case "DELETE_RESTAURANT":
       return { ...state, restaurants: [...state.restaurants.filter(rest => rest.id !== action.id)]}
 
+
+    //   case "UPDATE_RESTAURANT":
+    //     restaurant = {
+    //       text: action.text,
+    //       id: cuid()
+    //     }
+    //     return {...state, restaurants: [...state.restaurants.concat(restaurant)]}
+
+
+
     case "ADD_REVIEW":
       newReview = {
         text: action.review.text,
